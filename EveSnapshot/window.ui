@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>280</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EveSnapshot</string>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="accessibleName">
+       <string/>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="mainTab">
+       <attribute name="title">
+        <string>Characters</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="6" column="1">
+         <widget class="QPushButton" name="loadProfileAllBtn">
+          <property name="text">
+           <string>Load Profile for All Characters</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="selectedProfileLbl">
+          <property name="text">
+           <string>Selected Profile</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="profileComboBox"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QPushButton" name="loadProfileBtn">
+          <property name="text">
+           <string>Load Profile for Character</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" rowspan="6">
+         <widget class="QTreeWidget" name="profileLoadedTree">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="indentation">
+           <number>6</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>Character Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Profile Loaded</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Manage Profiles</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="5" column="1">
+         <widget class="QPushButton" name="deleteProfileBtn">
+          <property name="text">
+           <string>Delete Selected Profile</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="selectedCharLbl">
+          <property name="text">
+           <string>Selected Character</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="createFromSelectedBtn">
+          <property name="text">
+           <string>Create New From Selected Character</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="renameProfileBtn">
+          <property name="text">
+           <string>Rename Selected Profile</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="6">
+         <widget class="QTreeWidget" name="profileTree">
+          <property name="indentation">
+           <number>5</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>Profile Name</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="charSelectCombo"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="settingsTab">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <attribute name="title">
+        <string>Settings</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="evePathLbl">
+          <property name="text">
+           <string>Eve Settings Path</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QLineEdit" name="evePathInput">
+          <property name="cursorMoveStyle">
+           <enum>Qt::VisualMoveStyle</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
